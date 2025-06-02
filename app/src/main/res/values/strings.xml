@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My test app</string>
+    <string name="enter_your_message">Enter your message</string>
+    <string name="send_sms">Send SMS</string>
+    <string name="upload_data">Upload Data</string>
+    <string name="preview_for_image_2">Preview for image 2</string>
+    <string name="preview_for_image_1">Preview for image 1</string>
+    <string name="capture_image_2">Capture Image 2</string>
+    <string name="enter_text_data">Enter text data</string>
+    <string name="capture_image_1">Capture Image 1</string>
+</resources>

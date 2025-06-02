@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextTextData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_text_data"
+        android:inputType="textMultiLine"
+        android:minLines="2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonCaptureImage1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/capture_image_1"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextData"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"/>
+
+    <ImageView
+        android:id="@+id/imageViewPreview1"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:background="#E0E0E0"
+        android:contentDescription="@string/preview_for_image_1"
+        app:layout_constraintTop_toBottomOf="@id/buttonCaptureImage1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic"/>
+
+    <Button
+        android:id="@+id/buttonCaptureImage2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/capture_image_2"
+        app:layout_constraintTop_toBottomOf="@id/editTextTextData"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"/>
+
+    <ImageView
+        android:id="@+id/imageViewPreview2"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:background="#E0E0E0"
+        android:contentDescription="@string/preview_for_image_2"
+        app:layout_constraintTop_toBottomOf="@id/buttonCaptureImage2"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/buttonUpload"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/upload_data"
+        app:layout_constraintTop_toBottomOf="@id/imageViewPreview1"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/progressBarUpload"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/buttonUpload"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
