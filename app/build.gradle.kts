@@ -59,6 +59,7 @@ dependencies {
     // OkHttp for networking (Java)
     //implementation(com.squareup.okhttp3)
     implementation(libs.okhttp)
+    implementation(libs.okhttp.logging.interceptor)
 
     // Image Loading Library (Glide is a popular Java choice)
     implementation(libs.glide) // Check for latest
